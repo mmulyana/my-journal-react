@@ -1,6 +1,6 @@
 import { useParams } from 'react-router'
 
-export default function DetailJournal() {
+export default function JournalDetail() {
 	const { id } = useParams()
 
 	return (

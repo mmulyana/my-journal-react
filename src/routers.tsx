@@ -1,7 +1,8 @@
 import { createBrowserRouter } from 'react-router'
 
-import DetailJournal from './modules/journal/components/journal-detail'
 import Journal from './pages/journal'
+import JournalDetail from './modules/journal/components/journal-detail'
+import JournalForm from './modules/journal/components/journal-form'
 
 export const routers = createBrowserRouter([
 	{
@@ -10,11 +11,11 @@ export const routers = createBrowserRouter([
 		children: [
 			{
 				path: '/add',
-				element: null,
+				element: <JournalForm />,
 			},
 			{
 				path: '/:id',
-				element: <DetailJournal />,
+				element: <JournalDetail />,
 			},
 		],
 	},

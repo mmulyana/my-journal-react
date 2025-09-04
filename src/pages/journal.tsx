@@ -1,5 +1,5 @@
 import { Album, ChevronLeft, ChevronRight, Plus } from 'lucide-react'
-import { Outlet, useParams } from 'react-router'
+import { Link, Outlet, useParams } from 'react-router'
 
 import JournalListItem from '../modules/journal/components/journal-list-item'
 import Mainlayout from '../shared/layout/main-layout'
@@ -20,10 +20,13 @@ export default function Journal() {
 							<p>Journal</p>
 						</div>
 
-						<button className='py-1 flex items-center rounded-md pr-2 pl-1.5 bg-[#4F54EC] text-white gap-1 border border-[#4044D0]'>
+						<Link
+							to={'/add'}
+							className='py-1 flex items-center rounded-md pr-2 pl-1.5 bg-[#4F54EC] text-white gap-1 border border-[#4044D0]'
+						>
 							<Plus size={14} strokeWidth={2.5} />
 							<p className='text-sm'>Create New</p>
-						</button>
+						</Link>
 					</div>
 
 					<div className='overflow-y-auto h-[calc(100vh-48px)]'>
